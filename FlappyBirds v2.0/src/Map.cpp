@@ -1,6 +1,6 @@
-#include "Map.h"
-#include<ResourceManager.h>
-#include<ctime>
+#include "../include/Map.h"
+#include "../../GameEngine/include/ResourceManager.h"
+#include <ctime>
 
 Map::Map() : _endPos(-512)
 {
@@ -15,7 +15,7 @@ Map::~Map()
 
 void Map::init(){
      _blockSize = 24;
-    _textureB = gameEngine::ResourceManager::getTexture("C:/Users/Razor/Documents/Codeblocks_projects/FlappyBirds v2.0/textures/building/boundary.png");
+    _textureB = gameEngine::ResourceManager::getTexture("textures/building/boundary.png");
 
     srand(time(0));
     for(int i = 0; i < 5; i++){

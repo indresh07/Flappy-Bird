@@ -1,7 +1,7 @@
-#include "imageLoader.h"
-#include<picoPNG.h>
-#include<IOManager.h>
-#include<Errors.h>
+#include "../include/imageLoader.h"
+#include "../include/picoPNG.h"
+#include "../include/IOManager.h"
+#include "../include/Errors.h"
 namespace gameEngine{
 
     GLtexture imageLoader::loadPNG(std::string filepath){

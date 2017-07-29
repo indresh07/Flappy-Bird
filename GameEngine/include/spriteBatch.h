@@ -1,9 +1,9 @@
 #ifndef SPRITEBATCH_H
 #define SPRITEBATCH_H
-#include<glew.h>
-#include<glm.hpp>
-#include<vertex.h>
-#include<vector>
+#include <GL/glew.h>
+#include <glm/glm.hpp>
+#include "../include/vertex.h"
+#include <vector>
 
 namespace gameEngine{
 

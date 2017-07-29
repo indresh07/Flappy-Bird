@@ -1,4 +1,4 @@
-#include "Bird.h"
+#include "../include/Bird.h"
 
 Bird::Bird() : _birdSize(64), _count(0), _cameraSpeed(13), _score(0.0f), flag(0)
 {
@@ -20,15 +20,15 @@ void Bird::init(){
     _position = glm::vec4(-_birdSize/2, -_birdSize/2, _birdSize, _birdSize);
     _uv = glm::vec4(0.0f, 0.0f, 1.0f, 1.0f);
 
-    _texture[0] = gameEngine::ResourceManager::getTexture("C:/Users/Razor/Documents/Codeblocks_projects/FlappyBirds v2.0/textures/bird/frame-1.png");
-    _texture[1] = gameEngine::ResourceManager::getTexture("C:/Users/Razor/Documents/Codeblocks_projects/FlappyBirds v2.0/textures/bird/frame-2.png");
-    _texture[2] = gameEngine::ResourceManager::getTexture("C:/Users/Razor/Documents/Codeblocks_projects/FlappyBirds v2.0/textures/bird/frame-3.png");
-    _texture[3] = gameEngine::ResourceManager::getTexture("C:/Users/Razor/Documents/Codeblocks_projects/FlappyBirds v2.0/textures/bird/frame-4.png");
-    _texture[4] = gameEngine::ResourceManager::getTexture("C:/Users/Razor/Documents/Codeblocks_projects/FlappyBirds v2.0/textures/bird/frame-5.png");
-    _texture[5] = gameEngine::ResourceManager::getTexture("C:/Users/Razor/Documents/Codeblocks_projects/FlappyBirds v2.0/textures/bird/frame-6.png");
-    _texture[6] = gameEngine::ResourceManager::getTexture("C:/Users/Razor/Documents/Codeblocks_projects/FlappyBirds v2.0/textures/bird/frame-7.png");
-    _texture[7] = gameEngine::ResourceManager::getTexture("C:/Users/Razor/Documents/Codeblocks_projects/FlappyBirds v2.0/textures/bird/frame-8.png");
-    _texture[8] = gameEngine::ResourceManager::getTexture("C:/Users/Razor/Documents/Codeblocks_projects/FlappyBirds v2.0/textures/bird/frame-9.png");
+    _texture[0] = gameEngine::ResourceManager::getTexture("textures/bird/frame-1.png");
+    _texture[1] = gameEngine::ResourceManager::getTexture("textures/bird/frame-2.png");
+    _texture[2] = gameEngine::ResourceManager::getTexture("textures/bird/frame-3.png");
+    _texture[3] = gameEngine::ResourceManager::getTexture("textures/bird/frame-4.png");
+    _texture[4] = gameEngine::ResourceManager::getTexture("textures/bird/frame-5.png");
+    _texture[5] = gameEngine::ResourceManager::getTexture("textures/bird/frame-6.png");
+    _texture[6] = gameEngine::ResourceManager::getTexture("textures/bird/frame-7.png");
+    _texture[7] = gameEngine::ResourceManager::getTexture("textures/bird/frame-8.png");
+    _texture[8] = gameEngine::ResourceManager::getTexture("textures/bird/frame-9.png");
 }
 
 int Bird::draw(){

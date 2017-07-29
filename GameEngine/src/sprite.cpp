@@ -1,5 +1,5 @@
-#include "sprite.h"
-#include<ResourceManager.h>
+#include "../include/sprite.h"
+#include "../include/ResourceManager.h"
 
 namespace gameEngine{
 

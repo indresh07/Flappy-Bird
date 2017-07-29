@@ -1,19 +1,19 @@
 #ifndef MAINGAME_H
 #define MAINGAME_H
 
-#include<vector>
-#include<windows.h>
-#include<fstream>
+#include <vector>
+#include <ncurses.h>
+#include <fstream>
 
-#include"gameEngine.h"
-#include"Window.h"
-#include"GLSLprog.h"
-#include"Camera2D.h"
-#include"timing.h"
-#include"InputManager.h"
+#include "../../GameEngine/include/gameEngine.h"
+#include "../../GameEngine/include/Window.h"
+#include "../../GameEngine/include/GLSLprog.h"
+#include "../../GameEngine/include/Camera2D.h"
+#include "../../GameEngine/include/timing.h"
+#include "../../GameEngine/include/InputManager.h"
 
-#include"Bird.h"
-#include"Map.h"
+#include "Bird.h"
+#include "Map.h"
 
 enum class gameState {PLAY, EXIT};
 

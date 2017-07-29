@@ -1,9 +1,9 @@
 #ifndef CAMERA2D_H
 #define CAMERA2D_H
 
-#include<glm.hpp>
-#include<gtc/matrix_transform.hpp>
-#include<iostream>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <iostream>
 
 namespace gameEngine{
     class Camera2D

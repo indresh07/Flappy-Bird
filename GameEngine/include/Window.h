@@ -1,7 +1,7 @@
 #ifndef WINDOW_H
 #define WINDOW_H
-#include<string>
-#include<SDL.h>
+#include <string>
+#include <SDL2/SDL.h>
 namespace gameEngine{
 
     enum windowFlags {INVISIBLE = 0x1 , FULLSCREEN = 0x2, BORDERLESS = 0x4};

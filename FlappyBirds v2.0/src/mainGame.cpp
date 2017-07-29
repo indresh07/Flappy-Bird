@@ -1,9 +1,4 @@
-#include "mainGame.h"
-
-void gotoxy( int x, int y ){
-    COORD p = { x, y };
-    SetConsoleCursorPosition( GetStdHandle( STD_OUTPUT_HANDLE ), p );
-}
+#include "../include/mainGame.h"
 
 mainGame::mainGame() : _screenWidth(1024), _screenHeight(768), _status(gameState::PLAY), flag(0)
 {
@@ -22,22 +17,34 @@ void mainGame::run(){
 
     SDL_Quit();
 
+    clear();
+
+    int x, y;
+    getmaxyx(stdscr, y, x);
+
+    mvprintw(y/2, x/2 - 6, "Game Over!!!");
+
+    getch();
+
+    endwin();
+
 }
 
 void mainGame::initSystems(){
 
     gameEngine::init();
-    _window.create("FLOPPY BIRDS v1.0.0", _screenWidth, _screenHeight, 0);
+    _window.create("FLOPPY BIRDS v2.0.1", _screenWidth, _screenHeight, 0);
     _camera.init(_screenWidth, _screenHeight);
     _bird.init();
     _fps.init(90.0f);
     _maps.init();
     initShaders();
+    initscr();
 }
 
 void mainGame::initShaders(){
 
-    _shader.compileShader("C:/Users/Razor/Documents/Codeblocks_projects/FlappyBirds v2.0/shaders/shader.vs","C:/Users/Razor/Documents/Codeblocks_projects/FlappyBirds v2.0/shaders/shader.fs");
+    _shader.compileShader("shaders/shader.vs","shaders/shader.fs");
     _shader.addAttrib("vertexPosition");
     _shader.addAttrib("color");
     _shader.addAttrib("uv");
@@ -45,8 +52,6 @@ void mainGame::initShaders(){
 }
 
 void mainGame::gameloop(){
-
-    static int count = 0;
 
     while(_status == gameState::PLAY){
 
@@ -56,13 +61,15 @@ void mainGame::gameloop(){
         _camera.update();
         draw();
         fps = _fps.end();
-        if(count++ ==  10){
-            gotoxy(0,1);
-            std::cout<<"FPS : "<< fps;
-            count = 0;
-        }
-        gotoxy(0,2);
-        std::cout<<"SCORE : "<<(int)_bird.getScore();
+
+        int x, y;
+        getmaxyx(stdscr, y, x);
+
+        refresh();
+        clear();
+
+        mvprintw(y/2 - 1, x/2 - 6, "FPS : %.2f", fps);
+        mvprintw(y/2 + 1, x/2 - 8, "SCORE : %d",(int)_bird.getScore());
     }
 
 }

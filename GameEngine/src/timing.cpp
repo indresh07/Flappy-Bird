@@ -1,5 +1,5 @@
-#include "timing.h"
-#include<SDL.h>
+#include "../include/timing.h"
+#include <SDL2/SDL.h>
 
 namespace gameEngine{
 

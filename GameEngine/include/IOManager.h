@@ -1,8 +1,8 @@
 #ifndef IOMANAGER_H
 #define IOMANAGER_H
 
-#include<vector>
-#include<string>
+#include <vector>
+#include <string>
 namespace gameEngine{
 
     class IOManager

@@ -1,13 +1,13 @@
 #ifndef BIRD_H
 #define BIRD_H
 
-#include<glm.hpp>
-#include<iostream>
-#include<windows.h>
+#include <glm/glm.hpp>
+#include <iostream>
+//#include <windows.h>
 
-#include"textures.h"
-#include"ResourceManager.h"
-#include"spriteBatch.h"
+#include "../../GameEngine/include/textures.h"
+#include "../../GameEngine/include/ResourceManager.h"
+#include "../../GameEngine/include/spriteBatch.h"
 
 
 class Bird

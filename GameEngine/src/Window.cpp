@@ -1,7 +1,7 @@
-#include "Window.h"
-#include<iostream>
-#include<Errors.h>
-#include<glew.h>
+#include "../include/Window.h"
+#include <iostream>
+#include "../include/Errors.h"
+#include <GL/glew.h>
 
 namespace gameEngine{
     Window::Window()

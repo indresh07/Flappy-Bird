@@ -1,16 +1,16 @@
 #ifndef MAP_H
 #define MAP_H
 
-#include<iostream>
-#include<string>
-#include<fstream>
-#include<vector>
-#include<glm.hpp>
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <vector>
+#include <glm/glm.hpp>
 
-#include<Errors.h>
-#include<spriteBatch.h>
-#include<textures.h>
-#include<Block.h>
+#include "../../GameEngine/include/Errors.h"
+#include "../../GameEngine/include/spriteBatch.h"
+#include "../../GameEngine/include/textures.h"
+#include "Block.h"
 class Map
 {
     public:

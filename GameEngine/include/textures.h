@@ -2,7 +2,7 @@
 #define TEXTURES_H_INCLUDED
 
 
-#include<glew.h>
+#include <GL/glew.h>
 namespace gameEngine{
 
     struct GLtexture{

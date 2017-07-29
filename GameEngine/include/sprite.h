@@ -1,10 +1,10 @@
 #ifndef SPRITE_H
 #define SPRITE_H
 
-#include<iostream>
-#include<glew.h>
-#include<vertex.h>
-#include<textures.h>
+#include <iostream>
+#include <GL/glew.h>
+#include "vertex.h"
+#include "textures.h"
 namespace gameEngine{
 
     class sprite

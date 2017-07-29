@@ -1,6 +1,6 @@
-#include<SDL.h>
-#include<glew.h>
-#include<gameEngine.h>
+#include <SDL2/SDL.h>
+#include <GL/glew.h>
+#include "../include/gameEngine.h"
 
 namespace gameEngine{
     int init(){

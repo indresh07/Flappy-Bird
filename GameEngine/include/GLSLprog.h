@@ -1,9 +1,9 @@
 #ifndef GLSLPROG_H
 #define GLSLPROG_H
 
-#include<string>
-#include<glew.h>
-#include<Errors.h>
+#include <string>
+#include <GL/glew.h>
+#include "Errors.h"
 namespace gameEngine{
 
     class GLSLprog

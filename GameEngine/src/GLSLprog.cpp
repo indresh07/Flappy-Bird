@@ -1,4 +1,4 @@
-#include "GLSLprog.h"
+#include "../include/GLSLprog.h"
 #include<fstream>
 #include<vector>
 namespace gameEngine{

@@ -1,7 +1,7 @@
 #ifndef BLOCK_H_INCLUDED
 #define BLOCK_H_INCLUDED
 
-#include<glm.hpp>
+#include <glm/glm.hpp>
 
 struct block{
 

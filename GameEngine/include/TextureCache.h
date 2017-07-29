@@ -1,8 +1,9 @@
 #ifndef TEXTURECACHE_H
 #define TEXTURECACHE_H
 
-#include<map>
-#include<textures.h>
+#include <map>
+#include <string>
+#include "textures.h"
 
 namespace gameEngine{
     class TextureCache

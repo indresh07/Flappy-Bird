@@ -1,8 +1,9 @@
 #ifndef IMAGELOADER_H
 #define IMAGELOADER_H
 
-#include<string>
-#include<textures.h>
+#include <string>
+#include "textures.h"
+
 namespace gameEngine{
 
     class imageLoader

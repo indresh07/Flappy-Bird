@@ -1,8 +1,8 @@
 #ifndef INPUTMANAGER_H
 #define INPUTMANAGER_H
 
-#include<unordered_map>
-#include<glm.hpp>
+#include <unordered_map>
+#include <glm/glm.hpp>
 
 class InputManager
 {

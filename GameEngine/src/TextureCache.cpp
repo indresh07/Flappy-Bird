@@ -1,6 +1,6 @@
-#include "TextureCache.h"
-#include "imageLoader.h"
-#include<iostream>
+#include "../include/TextureCache.h"
+#include "../include/imageLoader.h"
+#include <iostream>
 namespace gameEngine{
     TextureCache::TextureCache()
     {
