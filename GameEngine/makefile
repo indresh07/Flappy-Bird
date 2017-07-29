@@ -10,23 +10,18 @@ binDir := bin
 files := $(basename $(notdir $(wildcard src/*)))
 all:
 	@make --no-print-directory object
-	@make --no-print-directory executable
-
-executable: $(files:%=$(binDir)/%)
+	@make --no-print-directory lib
 
 object: $(files:%=$(objDir)/%.o)
 
-lib: | $(binDir)
+lib: $(files:%=$(objDir)/%.o) | $(binDir)
+	@echo -n "Generating libge.a... "
 	@ar crf $(binDir)/libge.a $(files:%=$(objDir)/%.o)
+	@echo "Done"
 
 $(objDir)/%.o : $(srcDir)/%.cpp | $(objDir)
 	@echo -n "Generating $(notdir $@)... "
 	@g++ -c -o $@ $< $(libs) -std=c++11
-	@echo "Done"
-
-$(binDir)/% : $(objDir)/%.o  | $(binDir)
-	@echo -n "Generating $(notdir $@)... "
-	@g++ -o $@ $< $(libs) -std=c++11
 	@echo "Done"
 
 $(objDir):
@@ -36,9 +31,7 @@ $(binDir):
 	@mkdir $(binDir)
 
 clean:
-	@echo -n "Deleting files... "
 	@rm -f $(binDir)/*
 	@rm -f $(objDir)/*
 	@rmdir $(binDir)
 	@rmdir $(objDir)
-	@echo "Done"

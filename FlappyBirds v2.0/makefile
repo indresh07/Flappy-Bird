@@ -13,7 +13,9 @@ all:
 	@make --no-print-directory executable
 
 executable: main.cpp | $(binDir) 
-	@g++ -o $(binDir)/exe main.cpp $(files:%=$(objDir)/%.o) $(libs) 
+	@echo -n "Generating flappy... "
+	@g++ -o $(binDir)/flappy main.cpp $(files:%=$(objDir)/%.o) $(libs) 
+	@echo "Done"
 
 object: $(files:%=$(objDir)/%.o)
 
@@ -34,9 +36,7 @@ $(binDir):
 	@mkdir $(binDir)
 
 clean:
-	@echo -n "Deleting files... "
 	@rm -f $(binDir)/*
 	@rm -f $(objDir)/*
 	@rmdir $(binDir)
 	@rmdir $(objDir)
-	@echo "Done"

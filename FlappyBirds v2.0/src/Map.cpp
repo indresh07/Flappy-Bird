@@ -15,7 +15,7 @@ Map::~Map()
 
 void Map::init(){
      _blockSize = 24;
-    _textureB = gameEngine::ResourceManager::getTexture("textures/building/boundary.png");
+    _textureB = gameEngine::ResourceManager::getTexture("FlappyBirds v2.0/textures/building/boundary.png");
 
     srand(time(0));
     for(int i = 0; i < 5; i++){
@@ -101,7 +101,7 @@ int Map::getPointCharacteristic(glm::vec2 position){
 
 void Map::update(){
 
-    _endPos += 4.0f;
+    _endPos += 3.0f;
 
     if(_block[0].startPos.x + 48 < _endPos){
         for(int i = 0; i < 4; i++){

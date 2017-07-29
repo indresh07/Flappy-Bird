@@ -44,7 +44,7 @@ void mainGame::initSystems(){
 
 void mainGame::initShaders(){
 
-    _shader.compileShader("shaders/shader.vs","shaders/shader.fs");
+    _shader.compileShader("FlappyBirds v2.0/shaders/shader.vs","FlappyBirds v2.0/shaders/shader.fs");
     _shader.addAttrib("vertexPosition");
     _shader.addAttrib("color");
     _shader.addAttrib("uv");
@@ -57,7 +57,7 @@ void mainGame::gameloop(){
 
         _fps.begin();
         processInput();
-        _camera.setPosition(_camera.getPosition() - glm::vec2(4.0f * flag, 0));
+        _camera.setPosition(_camera.getPosition() - glm::vec2(3.0f * flag, 0));
         _camera.update();
         draw();
         fps = _fps.end();
